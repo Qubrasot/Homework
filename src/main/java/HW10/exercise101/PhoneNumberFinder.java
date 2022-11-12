@@ -2,12 +2,13 @@ package HW10.exercise101;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.regex.*;
 import java.util.*;
 
 public class PhoneNumberFinder {
-    public static void main(String[] args) throws FileNotFoundException {
-        FileInputStream fis = new FileInputStream("file.txt");
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream("HW10-materials/filePhone.txt");
         Scanner scanner = new Scanner(fis);
 
         String pattern1 = "\\d{3}-\\d{3}-\\d{4}";
@@ -30,5 +31,7 @@ public class PhoneNumberFinder {
 
             System.out.print(str);
         }
+
+        fis.close();
     }
 }
