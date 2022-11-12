@@ -33,7 +33,7 @@ public class TxtToJSON {
         String s = gson.toJson(userArray);
         FileOutputStream fos = new FileOutputStream("HW10-materials/user.json");
         fos.write(s.getBytes());
-        
+
         fis.close();
         fos.flush();
         fos.close();
