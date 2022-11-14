@@ -1,6 +1,7 @@
 package HW11.exercise111;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,6 +20,8 @@ public class OddNameInList {
 
     public static String findOddNames(List<String> names){
         return names.stream()
+                .filter(name -> Integer.parseInt(name.substring(0, 1)) % 2 == 1)
                 .collect(Collectors.joining(", "));
+
     }
 }
